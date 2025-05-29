@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors - Hand Game</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+
+  <div class="scoreboard">
+    <div>👤 You: <span id="userScore">0</span></div>
+    <div>🤖 Computer: <span id="computerScore">0</span></div>
+  </div>
+
+  <div class="game-area">
+    <div class="hand-container">
+      <div class="video-wrapper">
+        <video id="inputVideo" autoplay muted></video>
+        <canvas id="outputCanvas"></canvas>
+      </div>
+      <div class="label">You</div>
+    </div>
+
+    <div class="hand-container">
+      <img id="computerHandImage" src="" alt="Computer Hand" />
+      <div class="label">Computer</div>
+    </div>
+  </div>
+
+  <div class="countdown" id="countdown">Get Ready!</div>
+  <div class="result" id="resultText"></div>
+
+  <button onclick="startGame()">Play</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
